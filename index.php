@@ -15,13 +15,13 @@ $filters = "
   <div class='col-md-4'> 
     <div class='input-group'>
     Search by reward:&nbsp;
-    <input type='text' id='search-input' class='form-control input-lg' style='display:initial !important;' onkeyup='filter_raids()' placeholder='Search by name..' title='Type in a name'>
+    <input type='text' id='search-input' class='form-control input-lg' style='display:initial !important;' onkeyup='filter_quests()' placeholder='Search by name..' title='Type in a name'>
   </div>
 </div>
 <div class='col-md-4'> 
   <div class='input-group'>
     Search by city:&nbsp;
-    <select id='filter-city' class='form-control' style='display:initial !important;' onchange='filter_raids()'>
+    <select id='filter-city' class='form-control' style='display:initial !important;' onchange='filter_quests()'>
       <option disabled selected>Select</option>
       <option value='all'>All</option>";
       $count = count($geofence_srvc->geofences);
@@ -467,7 +467,7 @@ $(document).on("click", ".delete", function(){
 	$(".add-new").removeAttr("disabled");
 });
 
-function filter_raids() {
+function filter_quests() {
   var search_filter = document.getElementById("search-input").value.toUpperCase();
   var city_filter = document.getElementById("filter-city").value.toUpperCase();
   
